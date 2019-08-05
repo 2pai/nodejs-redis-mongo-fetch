@@ -33,7 +33,7 @@ const postBanner = async (req,res) => {
 const getIPInfo =  async (req,res) => {
     const redisKey = 'keyip:'+req.ip; // key berdasarkan ip user
     client.get(redisKey,async (err,data) => {
-        if(result){ // cek apakah ada di redis atau tidak
+        if(data){ // cek apakah ada di redis atau tidak
             res.status(200).send({isCached:true,data:JSON.parse(data)}); 
         }else{
             let fetchData = await fetch("http://ip-api.com/json/"+req.ip)
