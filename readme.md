@@ -17,3 +17,4 @@ node index.js
 Note
 ---
 *please make sure that redis running on your local machine at default config*
+*Link medium : https://medium.com/@iqbalsyamilayas/caching-data-dengan-redis-di-nodejs-a729955812ff*
